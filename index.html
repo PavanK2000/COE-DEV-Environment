@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>COE | HDFC Bank</title>
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <!-- venobox popup -->
+    <link rel="stylesheet" href="plugins/Venobox/venobox.css">
+    <!-- aos -->
+    <link rel="stylesheet" href="plugins/aos/aos.css">
+
+    <!-- Main Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="plugins/jQuery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/hdfcbanklogo.svg" type="image/x-icon">
+    <link rel="icon" href="images/hdfcbanklogo.svg" type="image/x-icon">
+
+    <style>
+        /*ATM Card BG Path*/
+        /* ===== Hover Dropdown ===== */
+        .navbar .dropdown {
+            position: relative;
+        }
+
+        /* Hide submenu by default */
+        .navbar .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            border: none;
+            border-radius: 8px;
+            min-width: 220px;
+            padding: 8px 0;
+            background: #fff;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+            transition: all 0.3s ease;
+        }
+
+        /* Show on hover */
+        .navbar .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Dropdown items */
+        .dropdown-item {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+        }
+
+            /* Premium hover effect */
+            .dropdown-item:hover {
+                background: linear-gradient(90deg, #0066ff, #003399);
+                color: #fff;
+            }
+
+
+        /* Background pattern layer */
+        .card-pattern1 {
+            position: absolute;
+            inset: 0;
+            background-image: url("images/card-pattern1.png"); /* icons pattern image */
+            background-size: cover;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        .card-pattern2 {
+            position: absolute;
+            inset: 0;
+            background-image: url("images/card-pattern2.png"); /* icons pattern image */
+            background-size: cover;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        .card-pattern3 {
+            position: absolute;
+            inset: 0;
+            background-image: url("images/card-pattern3.png"); /* icons pattern image */
+            background-size: cover;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- navigation -->
+    <section class="fixed-top navigation">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/COE_Portal_logo.png" alt="logo" style="max-width:180px; border-radius:10px;">
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar -->
+                <div class="collapse navbar-collapse text-center" id="navbar">
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Home -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="ti-home"></i> Home
+                            </a>
+                        </li>
+
+                        <!-- Inventory Management (Dropdown) -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#">
+                                Inventory Management
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Mitra</a></li>
+                                <li><a class="dropdown-item" href="#">Model Inventory Sep-2025</a></li>
+                                <li><a class="dropdown-item" href="#">Model Inventory Dec-2025</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- AI/ML Policies (Dropdown) -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#">
+                                AI/ML Policies
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Documentation Library</a></li>
+                                <li><a class="dropdown-item" href="#">Validation Checker Tool</a></li>
+                                <li><a class="dropdown-item" href="#monitoringreport">Monitoring Report</a></li>
+                                <li><a class="dropdown-item" href="#">Policies</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Awards -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#awardstoggle">Awards</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- Help Desk Button -->
+                    <a href="#" class="btn btn-primary ml-lg-3 primary-shadow">Help Desk</a>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+
+    <!-- /navigation -->
+    <!-- hero area -->
+    <section class="hero-section hero" data-background="" style="background-image: url(images/hero-area/banner-bg.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center zindex-1">
+                    <h1 class="mb-3">
+                        Take Control of your<br>
+                        <span style="color:red">AI</span> Models Ecosystem
+                    </h1>
+                    <p class="mb-4">
+                        Centralize governance, reduce risk, and keep your AI compliant and reliable.
+                    </p>
+                    <a href="#" class="btn btn-secondary btn-lg"><i class="ti-arrow-down"></i> Our Impact <i class="ti-arrow-down"></i></a>
+
+                    <!-- ===== HDFC Style COE Card ===== -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card-wrapper">
+
+                                    <div class="hdfc-card1">
+
+                                        <!-- Background Pattern -->
+                                        <div class="card-pattern1"></div>
+
+                                        <!-- Top Row -->
+                                        <div class="card-top">
+                                            <img src="images/hdfcbanklogo.svg" class="hdfc-logo" style="opacity:70%;">
+                                            <span class="card-credit-text">Platinum</span>
+                                        </div>
+                                        <!-- Chip -->
+                                        <img src="images/chip.png" class="card-chip">
+
+                                        <!-- Center Count -->
+                                        <div class="card-center">
+                                            <div class="card-count" style="float:left;">128</div><br />
+                                            <div class="card-label">Models Approved</div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card-wrapper">
+
+                                    <div class="hdfc-card2">
+
+                                        <!-- Background Pattern -->
+                                        <div class="card-pattern2"></div>
+
+                                        <!-- Top Row -->
+                                        <div class="card-top">
+                                            <img src="images/hdfcbanklogo.svg" class="hdfc-logo" style="opacity:70%;">
+                                            <span class="card-credit-text">Gold</span>
+                                        </div>
+                                        <!-- Chip -->
+                                        <img src="images/chip.png" class="card-chip">
+
+                                        <!-- Center Count -->
+                                        <div class="card-center">
+                                            <div class="card-count" style="float:left;">128</div><br />
+                                            <div class="card-label">Total Issues Resolved  <i class="lni lni-angle-double-right"></i></div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card-wrapper">
+
+                                    <div class="hdfc-card3">
+
+                                        <!-- Background Pattern -->
+                                        <div class="card-pattern3"></div>
+
+                                        <!-- Top Row -->
+                                        <div class="card-top">
+                                            <img src="images/hdfcbanklogo.svg" class="hdfc-logo" style="opacity:70%;">
+                                            <span class="card-credit-text">Millennia</span>
+                                        </div>
+                                        <!-- Chip -->
+                                        <img src="images/chip.png" class="card-chip">
+
+                                        <!-- Center Count -->
+                                        <div class="card-center">
+                                            <div class="card-count" style="float:left;">128</div><br />
+                                            <div class="card-label">Tickets Work In Progress  <i class="lni lni-angle-double-right"></i></div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <!-- background shapes -->
+        <div id="scene">
+            <img class="img-fluid hero-bg-1 up-down-animation" src="images/background-shape/feature-bg-2.png" alt="">
+            <img class="img-fluid hero-bg-2 left-right-animation" src="images/background-shape/seo-ball-1.png" alt="">
+            <img class="img-fluid hero-bg-3 left-right-animation" src="images/background-shape/seo-half-cycle.png" alt="">
+            <img class="img-fluid hero-bg-4 up-down-animation" src="images/background-shape/green-dot.png" alt="">
+            <img class="img-fluid hero-bg-5 left-right-animation" src="images/background-shape/blue-half-cycle.png" alt="">
+            <img class="img-fluid hero-bg-6 up-down-animation" src="images/background-shape/seo-ball-1.png" alt="">
+            <img class="img-fluid hero-bg-7 left-right-animation" src="images/background-shape/yellow-triangle.png" alt="">
+            <img class="img-fluid hero-bg-8 up-down-animation" src="images/background-shape/service-half-cycle.png" alt="">
+            <img class="img-fluid hero-bg-9 up-down-animation" src="images/background-shape/team-bg-triangle.png" alt="">
+        </div>
+    </section>
+
+
+    <!-- marketing -->
+    <section class="section-lg seo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="seo-image">
+                        <img class="img-fluid" src="images/helpdeskanimated.gif" alt="form-img">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="section-title">
+                        <span style="font-size:110px;">S</span>tuck in something!
+                    </h3>
+                    <p>
+                        <i class="ti-angle-double-right"></i> <span style="color:red;">Help Desk</span> helps you move forward without delays. <br />
+                        <i class="ti-angle-double-right"></i> Raise your queries, issues, or support requests anytime. <br />
+                        <i class="ti-angle-double-right"></i> Get timely assistance from the COE support team. <br />
+                        <i class="ti-angle-double-right"></i> Track your requests and stay updated on progress. <br />
+                        <span style="color:blue; font-size:20px;"><i class="ti-arrow-down"></i> Because smooth AI operations should never stop.</span>
+                    </p>
+                    <a href="#" class="btn btn-secondary btn-lg">Help Desk</a>
+                </div>
+            </div>
+        </div>
+        <!-- background image -->
+        <img class="img-fluid seo-bg" src="images/backgrounds/seo-bg.png" alt="seo-bg">
+        <!-- background-shape -->
+        <img class="seo-bg-shape-1 left-right-animation" src="images/background-shape/seo-ball-1.png" alt="bg-shape">
+        <img class="seo-bg-shape-2 up-down-animation" src="images/background-shape/seo-half-cycle.png" alt="bg-shape">
+        <img class="seo-bg-shape-3 left-right-animation" src="images/background-shape/seo-ball-2.png" alt="bg-shape">
+    </section>
+    <!-- /marketing -->
+    <!-- /client logo slider -->
+    <!-- newsletter -->
+    <!--<section class="newsletter">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>Policies Corner</h2>-->
+    <!--<p class="mb-5">Receive updates, news and deals</p>-->
+    <!--</div>
+        <div class="col-lg-8 col-sm-10 col-12 mx-auto">
+          <form action="#">
+            <div class="input-wrapper position-relative">
+              <input type="email" class="newsletter-form" id="newsletter" placeholder="Whatr are AI/ML Policies.. ?">
+              <button type="submit" value="send" class="btn newsletter-btn">Search</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>-->
+    <!-- background shapes -->
+    <!--<img class="newsletter-bg-shape left-right-animation" src="images/background-shape/seo-ball-2.png" alt="background-shape">
+    </section>-->
+    <!-- /newsletter -->
+    <!-- AI/ML Section -->
+
+
+    <div class="container-fluid about">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="about-item-content bg-white rounded p-5 h-100">
+                        <h4 class="text-primary">AI/ML Policies <span class="display-4 mb-4" style="color:black;">Corner</span></h4>
+                        <hr />
+                        <p class="policy-highlight">
+                            <i class="ti-arrow-circle-right" style="font-size:20px; color:red;"></i> <span style="font-size:30px; color:blueviolet;">0</span>ur Al/ML Policy establishes the guidelines and principles that govern the development, deployment, and use of artificial intelligence and machine learning technologies within our organization. It outlines ethical considerations, data privacy protection, transparency, and accountability standards. Please carefully read through the policy to ensure a clear understanding of our expectations and compliance requirements....<i class="ti-themify-favicon" style="color:blueviolet;"></i>
+                        </p><br />
+                        <a class="btn btn-primary rounded-pill py-3 px-5" href="#">More Information</a>
+                        <br /><br /><br /><br />
+                        <img src="images/policiesbg.png" class="img-fluid rounded w-100" style="float:right;">
+                    </div>
+                </div>
+                <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="bg-white rounded p-5 h-100">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-12">
+                                <div class="updates-bg">
+                                    <h4 class="updates" style="text-decoration:underline;"><span style="font-size:50px;">U</span>pd<i class="ti-reddit"></i>tes</h4> &nbsp;
+                                    <img src="images/helpdesk.png" class="img-fluid rounded w-100" style="max-width:63%;">
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="counter-item bg-light rounded p-3 h-100 expand-card" style="margin-top:15px;">
+
+                                    <!-- Header (click area) -->
+                                    <div>
+                                        <h5 class="mb-0 text-dark" style="color:red !important;">Techniques Exploration:</h5>
+                                    </div>
+
+                                    <!-- Expand Content -->
+                                    <div>
+                                        <i class="ti-angle-double-right" style="color:blueviolet;"></i> <span style="color:blueviolet;">S</span>ynthetic data - Generated synthetic data based on existing PL data and shared same with SAS for PoC. <br />
+                                        <i class="ti-angle-double-right" style="color:blueviolet;"></i> <span style="color:blueviolet;">S</span>weetviz report - Data Visualization which helps in comparing model features part of Train & Validation datasets at one go.
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="counter-item bg-light rounded p-3 h-100 expand-card" style="margin-top:25px;">
+
+                                    <div>
+                                        <h5 class="mb-0 text-dark" style="color:red !important;">Models Inventory related/Governance:</h5>
+                                    </div>
+
+                                    <div>
+                                        <i class="ti-angle-double-right" style="color:blueviolet;"></i> <span style="color:blueviolet;">V</span>alidated Model documentation for 37 models and successfully mapped respective use case. <br />
+                                        <i class="ti-angle-double-right" style="color:blueviolet;"></i> <span style="color:blueviolet;">M</span>odified Procedural Manual for Marketing Analytics as per RBI guidelines. <br />
+                                        <i class="ti-angle-double-right" style="color:blueviolet;"></i> <span style="color:blueviolet;">M</span>eeting arranged with IRM team on 13th of Nov'25 for better understanding on new AI Policy 2025.
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="counter-item bg-light rounded p-3 h-100 expand-card" style="margin-top:35px;">
+
+                                    <div>
+                                        <h5 class="mb-0 text-dark" style="color:red !important;">DO's':</h5>
+                                    </div>
+
+                                    <div>
+                                        <i class="ti-angle-double-right" style="color:blueviolet;"></i> <span style="color:blueviolet;">D</span>eploy Models only post approval from CoE team. <br />
+                                        <i class="ti-angle-double-right" style="color:blueviolet;"></i> <span style="color:blueviolet;">M</span>aintain FTR for Model Documentation using MDV tool.
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+
+    <!--Model Drift Management-->
+
+    <section id="monitoringreport" class="drift-section">
+        <div class="container">
+
+            <h2 class="drift-title">Model Drift Management</h2>
+            <p class="drift-subtitle">
+                Monitor, analyze and take action to ensure model stability and performance over time.
+            </p>
+
+            <div class="row">
+
+                <!-- Data Drift -->
+                <div class="col-md-6 mb-4">
+                    <div class="drift-card">
+                        <h4 style="color:blueviolet;">Model Monitoring Drift Checker</h4>
+                        <p>
+                            Detect changes in input data distribution that may impact model accuracy and reliability.
+                            Continuous monitoring helps maintain data consistency and governance.
+                        </p>
+
+                        <div class="drift-buttons">
+                            <a href="#" class="btn btn-primary">Lets Go !</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance Drift -->
+                <div class="col-md-6 mb-4">
+                    <div class="drift-card">
+                        <h4 style="color:blueviolet;">Feature Stability Index Drift Checker</h4>
+                        <p>
+                            Track model performance degradation over time. Identify accuracy drops and take corrective
+                            actions to maintain optimal model outcomes.
+                        </p>
+
+                        <div class="drift-buttons">
+                            <a href="#" class="btn btn-primary">Lets Go !</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <br /><br />
+    <!--OUR VIEWS-->
+    <section class="our-views-section">
+        <div class="container">
+
+            <div class="our-views-title" style="margin-top:30px;">
+                <i class="ti-flag-alt"></i> <span style="font-size:100px;">O</span>ur Views
+            </div>
+
+            <div class="row">
+
+                <!-- LEFT SIDE -->
+                <div class="col-md-6">
+
+                    <div class="view-card view-gap">
+                        <i class="ti-align-right" style="color:red;"></i>&nbsp; Responsible AI must ensure fairness, transparency, and accountability across all deployed models.
+                    </div>
+
+                    <div class="view-card">
+                        <i class="ti-align-right" style="color:red;"></i>&nbsp; Governance frameworks should balance innovation with strong risk management principles.
+                    </div>
+
+                </div>
+
+                <!-- RIGHT SIDE -->
+                <div class="col-md-6">
+
+                    <div class="view-card view-gap">
+                        <i class="ti-align-right" style="color:red;"></i>&nbsp; Data privacy and compliance should be embedded into every stage of AI lifecycle design.
+                    </div>
+
+                    <div class="view-card">
+                        <i class="ti-align-right" style="color:red;"></i>&nbsp; Continuous validation, monitoring, and model performance tracking are essential for sustainability.
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <br />
+    <!--Awards-->
+    <section id="awardstoggle" class="awards-section">
+        <div class="container text-center" style="background-image: url(images/backgrounds/awardsbg.png);">
+
+            <h2 class="awards-title" style="float:left;"><i class="ti-cup"></i> <span style="color:blueviolet;">A</span><span style="color:mediumaquamarine;">wards</span> <i class="ti-cup"></i></h2>
+            <br /><br /><br />
+            <div class="coverflow-wrapper">
+                <div class="coverflow" id="coverflow">
+
+                    <div class="cover-item">
+                        <img src="images/hero-area/slide1.png">
+                        <span>This is First Slide</span>
+                    </div>
+
+                    <div class="cover-item">
+                        <img src="images/hero-area/slide2.png">
+                        <span>This is Second Slide</span>
+                    </div>
+
+                    <div class="cover-item">
+                        <img src="images/hero-area/slide1.png">
+                        <span>This is Third Slide</span>
+                    </div>
+
+                    <div class="cover-item">
+                        <img src="images/hero-area/slide2.png">
+                        <span>This is Fourth Slide</span>
+                    </div>
+
+                    <div class="cover-item">
+                        <img src="images/hero-area/slide1.png">
+                        <span>This is Fifth Slide</span>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!--feedback-->
+    <section id="feedback" class="feedback-section">
+        <br />
+        <div class="feedback-container">
+
+            <!-- LEFT: AUTO-SCROLLING REVIEWS -->
+            <div class="testimonials">
+
+                <h2>Feedbacks from <span style="color:red;">team</span> !!</h2>
+                <p class="subtitle">⭐⭐⭐⭐⭐</p>
+
+                <div class="testimonial-scroll">
+
+                    <div class="testimonial-track">
+
+                        <div class="testimonial-card">
+                            <p>“The COE Portal is amazing and very helpfull”</p>
+                            <span>— Pavan Kalyan</span>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <p>“The COE Portal is amazing and very helpfull”</p>
+                            <span>— Pavan Kalyan</span>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <p>“The COE Portal is amazing and very helpfull”</p>
+                            <span>— Pavan Kalyan</span>
+                        </div>
+
+                        <!-- DUPLICATE FOR INFINITE SCROLL -->
+                        <div class="testimonial-card">
+                            <p>“The COE Portal is amazing and very helpfull”</p>
+                            <span>— Pavan Kalyan</span>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <p>“The COE Portal is amazing and very helpfull”</p>
+                            <span>— Pavan Kalyan</span>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <p>“The COE Portal is amazing and very helpfull”</p>
+                            <span>— Pavan Kalyan</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT: FEEDBACK FORM -->
+            <div class="feedback-form">
+
+                <h2><span style="color:red;">S</span>hare <span style="color:red;">Y</span>our <span style="color:red;">F</span>eedback</h2>
+                <p class="subtitle">
+                    Help us improve by sharing your experience.
+                </p>
+
+                <form>
+                    <label>Employee Name</label>
+                    <textarea placeholder="Employee Name"></textarea>
+
+                    <label>Employee ID</label>
+                    <textarea placeholder="Employee ID"></textarea>
+
+                    <label>Enter Your Comments</label>
+                    <textarea placeholder="Enter Your Comments"></textarea>
+
+                    <button type="submit">Post Feedback</button>
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- AI/ML Section -->
+    <!-- footer -->
+    <footer class="footer-section footer" style="background-image: url(images/backgrounds/footertaj.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- logo -->
+                    <img class="img-fluid" src="images/hdfcbanklogo.svg" alt="logo" style="max-width:190px;">
+                    <br />
+                    <h5 style="color:white;">The <span style="color:greenyellow;">COE</span> Website is an internal product of HDFC Bank. Access and usage are restricted to authorized users only.</h5>
+
+                </div>
+                <!-- footer menu -->
+                <div class="col-md-4">
+                    <div class="footer-widget">
+                        <h3 style="color:white;"><span style="color:greenyellow;">Q</span>uick <span style="color:greenyellow;">L</span>inks</h3>
+                        <ul class="links">
+                            <li><a href="" style="color:white;">Mitra</a></li>
+                            <li><a href="" style="color:white;">Model Documentation Validator</a></li>
+                            <li><a href="" style="color:white;">Help Desk</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h2 style="color:greenyellow; opacity:40%;">Coming Soon....</h2>
+                    <h4 style="color:greenyellow; opacity:40%;">Drift Checker <i class="ti-gift" style="color:magenta;"></i></h4>
+                </div>
+            </div>
+            <p style="color:red;">©All Rights Reserved© - HDFC BANK.</p>
+        </div>
+    </footer>
+    <!-- /footer -->
+    <!-- jQuery -->
+    <script src="plugins/jQuery/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- slick slider -->
+    <script src="plugins/slick/slick.min.js"></script>
+    <!-- venobox -->
+    <script src="plugins/Venobox/venobox.min.js"></script>
+    <!-- aos -->
+    <script src="plugins/aos/aos.js"></script>
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener("scroll", function () {
+            var navbar = document.querySelector(".navigation");
+
+            if (window.scrollY > 50) {
+                navbar.classList.add("nav-scrolled");
+            } else {
+                navbar.classList.remove("nav-scrolled");
+            }
+        });
+    </script>
+
+    <script>
+        const items = document.querySelectorAll(".cover-item");
+        let current = 2; // start from middle for balance
+
+        function updateCoverflow() {
+            items.forEach((item, index) => {
+                const offset = index - current;
+
+                if (offset === 0) {
+                    item.style.transform =
+                        "translateX(-50%) translateZ(200px) rotateY(0deg) scale(1.15)";
+                    item.style.zIndex = 10;
+                    item.style.opacity = 1;
+                }
+                else if (offset === -1) {
+                    item.style.transform =
+                        "translateX(-170%) translateZ(0px) rotateY(40deg) scale(0.9)";
+                    item.style.zIndex = 6;
+                    item.style.opacity = 0.8;
+                }
+                else if (offset === 1) {
+                    item.style.transform =
+                        "translateX(70%) translateZ(0px) rotateY(-40deg) scale(0.9)";
+                    item.style.zIndex = 6;
+                    item.style.opacity = 0.8;
+                }
+                else {
+                    item.style.transform =
+                        "translateX(-50%) translateZ(-250px) scale(0.7)";
+                    item.style.zIndex = 1;
+                    item.style.opacity = 0;
+                }
+            });
+        }
+
+        function nextSlide() {
+            current = (current + 1) % items.length;
+            updateCoverflow();
+        }
+
+        updateCoverflow();
+        setInterval(nextSlide, 3500);
+    </script>
+
+</body>
+</html>

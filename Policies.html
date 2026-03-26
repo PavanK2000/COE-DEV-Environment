@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <title>COE | HDFC Bank</title>
+
+    <!-- mobile responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- ** Plugins Needed for the Project ** -->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="plugins/bootstrap/bootstrap.min.css">
+    <!-- themefy-icon -->
+    <link rel="stylesheet" href="plugins/themify-icons/themify-icons.css">
+    <!-- slick slider -->
+    <link rel="stylesheet" href="plugins/slick/slick.css">
+    <!-- venobox popup -->
+    <link rel="stylesheet" href="plugins/Venobox/venobox.css">
+    <!-- aos -->
+    <link rel="stylesheet" href="plugins/aos/aos.css">
+
+    <!-- Main Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="plugins/jQuery/jquery.min.js"></script>
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="images/hdfcbanklogo.svg" type="image/x-icon">
+    <link rel="icon" href="images/hdfcbanklogo.svg" type="image/x-icon">
+
+    <style>
+        /*ATM Card BG Path*/
+        /* ===== Hover Dropdown ===== */
+        .navbar .dropdown {
+            position: relative;
+        }
+
+        /* Hide submenu by default */
+        .navbar .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            border: none;
+            border-radius: 8px;
+            min-width: 220px;
+            padding: 8px 0;
+            background: #fff;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+            transition: all 0.3s ease;
+        }
+
+        /* Show on hover */
+        .navbar .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Dropdown items */
+        .dropdown-item {
+            padding: 10px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333;
+        }
+
+            /* Premium hover effect */
+            .dropdown-item:hover {
+                background: linear-gradient(90deg, #0066ff, #003399);
+                color: #fff;
+            }
+
+
+        /* Background pattern layer */
+        .card-pattern1 {
+            position: absolute;
+            inset: 0;
+            background-image: url("images/card-pattern1.png"); /* icons pattern image */
+            background-size: cover;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        .card-pattern2 {
+            position: absolute;
+            inset: 0;
+            background-image: url("images/card-pattern2.png"); /* icons pattern image */
+            background-size: cover;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        .card-pattern3 {
+            position: absolute;
+            inset: 0;
+            background-image: url("images/card-pattern3.png"); /* icons pattern image */
+            background-size: cover;
+            opacity: 0.15;
+            pointer-events: none;
+        }
+        .policy-floating-cards {
+            position: relative;
+            z-index: 10;
+        }
+
+        .policy-card {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: 0.3s;
+            border-bottom-left-radius: 100px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 100px;
+        }
+
+            .policy-card h4 {
+                color: #003399;
+                font-weight: 700;
+            }
+
+            .policy-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            }
+
+            /* Bubble base */
+            .policy-card::before,
+            .policy-card::after {
+                content: "";
+                position: absolute;
+                border-radius: 50%;
+                opacity: 0.15;
+            }
+
+            /* Big bubble */
+            .policy-card::before {
+                width: 120px;
+                height: 120px;
+                background: #6c5ce7;
+                top: -30px;
+                right: -30px;
+            }
+
+            /* Small bubble */
+            .policy-card::after {
+                width: 60px;
+                height: 60px;
+                background: #00cec9;
+                bottom: 20px;
+                left: 20px;
+            }
+
+            /* V1 */
+            .policy-card.v1::before {
+                background: #6c5ce7;
+            }
+
+            .policy-card.v1::after {
+                background: #a29bfe;
+            }
+
+            /* V2 */
+            .policy-card.v2::before {
+                background: #00b894;
+            }
+
+            .policy-card.v2::after {
+                background: #55efc4;
+            }
+
+            /* AI Policy */
+            .policy-card.v3::before {
+                background: #0984e3;
+            }
+
+            .policy-card.v3::after {
+                background: #74b9ff;
+            }
+
+        
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(45deg, #6a5cff, #8f6bff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Button */
+        .btn-gradient {
+            background: linear-gradient(45deg, #6a5cff, #8f6bff);
+            color: #fff;
+            border: none;
+            transition: 0.3s;
+        }
+
+            .btn-gradient:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(106, 92, 255, 0.3);
+                color:chartreuse;
+            }
+
+        /* Badge */
+        .bg-gradient {
+            background: linear-gradient(45deg, #6a5cff, #8f6bff);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 12px;
+        }
+
+
+
+        /* Glass Card */
+        .doclib-glass {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(18px);
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            margin-left: -70px;
+            margin-right: -70px;
+        }
+
+        /* Badge */
+        .doc-badge {
+            background: linear-gradient(45deg, #6a5cff, #8f6bff);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 12px;
+        }
+
+        /* Title */
+        .doc-title {
+            font-size: 42px;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+
+            .doc-title span {
+                background: linear-gradient(45deg, #6a5cff, #8f6bff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+        /* Description */
+        .doc-desc {
+            color: #666;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        .btn-doc-secondary {
+            border: 1px solid #6a5cff;
+            color: #6a5cff;
+            padding: 12px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+        }
+
+        /* Visual */
+        .doc-visual {
+            position: relative;
+            height: 300px;
+        }
+
+        /* Center Icon */
+        .center-icon {
+            font-size: 70px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Floating Cards */
+        .floating-card {
+            position: absolute;
+            background: white;
+            padding: 0px 7px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            animation: float 4s infinite ease-in-out;
+        }
+
+            .floating-card.delay {
+                top: 40%;
+                left: 0%;
+                animation-delay: 1s;
+            }
+
+            .floating-card.delay2 {
+                bottom: 20%;
+                right: 10%;
+                animation-delay: 2s;
+            }
+
+            .floating-card:not(.delay):not(.delay2) {
+                top: 10%;
+                right: 15%;
+            }
+
+        /* Floating Animation */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+
+</head>
+
+<body style="padding-top: 90px;">
+
+
+    <!-- header -->
+    <section class="fixed-top navigation" style="background: #ffffff; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light">
+
+                <!-- Logo -->
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/COE_Portal_logo.png" alt="logo" style="max-width:180px; border-radius:10px;">
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Navbar -->
+                <div class="collapse navbar-collapse text-center" id="navbar">
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Home -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="ti-home"></i> Home
+                            </a>
+                        </li>
+
+                        <!-- Inventory Management (Dropdown) -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#">
+                                Inventory Management
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Mitra</a></li>
+                                <li><a class="dropdown-item" href="#">Model Inventory Sep-2025</a></li>
+                                <li><a class="dropdown-item" href="#">Model Inventory Dec-2025</a></li>
+                                <li><a class="dropdown-item" href="#">Sample Use Cases Questionaire</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- AI/ML Policies (Dropdown) -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#">
+                                AI/ML Policies
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Documentation Library</a></li>
+                                <li><a class="dropdown-item" href="#">Validation Checker Tool</a></li>
+                                <li><a class="dropdown-item" href="#monitoringreport">Monitoring Report</a></li>
+                                <li><a class="dropdown-item" href="#">Policies</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Awards -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="#awardstoggle">Awards</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- Help Desk Button -->
+                    <a href="#" class="btn btn-primary ml-lg-3 primary-shadow">Help Desk</a>
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <!-- marketing -->
+    <section class="section-lg seo" style="background-color:blueviolet;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="seo-image">
+                        <img class="img-fluid" src="images/AIMLneuralimg.png" alt="form-img" style="max-width:80%;">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <h3 class="section-title our-views-title-two" style="font-size:25px;">
+                        <span style="font-size: 110px;">AI</span>/ML Policies & <span style="font-size: 110px;">D</span>ocumentation
+                    </h3>
+                    <h6 style="color:white; margin-top:190px;">
+                        <i class="ti-angle-double-right" style="color:lime;"></i> Our AI/ML Policy establishes the guidelines and principles that govern the development, deployment, and use of artificial intelligence and machine learning technologies within our organization. <br /><i class="ti-angle-double-right" style="color:lime;"></i>It outlines ethical considerations, data privacy protection, transparency, and accountability standards.<br /><i class="ti-angle-double-right" style="color:lime;"></i>Please carefully read through the policy to ensure a clear understanding of our expectations and compliance requirements. There are two versions of the same and details as follows: <br />
+
+                    </h6>
+                </div>
+            </div>
+        </div>
+
+        <section class="policy-floating-cards">
+            <div class="container">
+                <div class="row text-center">
+
+                    <div class="col-md-6">
+                        <div class="policy-card v1" style="border-bottom-left-radius: 10px; border-top-left-radius: 100px; border-top-right-radius: 100px; border-bottom-right-radius: 10px;">
+                            <a href="#">
+                                <h4 style="color:blueviolet;">MRM & MRM Oversight Policy</h4>
+                                <p>Board Approved Jan 2026</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="policy-card v1" style="border-bottom-left-radius: 10px; border-top-left-radius: 100px; border-top-right-radius: 100px; border-bottom-right-radius: 10px;">
+                            <a href="#">
+                                <h4 style="color:blueviolet;">AI Policy</h4>
+                                <p>(Erstwhile AI/ML Policy) on Aug 2025</p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="policy-card v1">
+                            <a href="#">
+                                <h4 style="color:blueviolet;">V2</h4>
+                                <p>AI/ML Policy Released Jul 2024</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="policy-card v2">
+                            <a href="#">
+                                <h4 style="color:blueviolet;">V1</h4>
+                                <p>AI/ML Policy Released Oct 2022</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="policy-card v3">
+                            <a href="#">
+                                <h4 style="color:blueviolet;">EMVP Policy</h4>
+                                <p>Released on Jan 2024</p>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- Document Library Starts -->
+    <section class="doclib-hero">
+        <div class="container">
+
+            <div class="doclib-glass">
+
+                <div class="row align-items-center">
+                    <!-- Left Content -->
+                    <div class="col-lg-4 text-center">
+                        <div class="doc-visual">
+                            <div class="floating-card">📁 Model <br /> Documentation</div>
+                            <div class="floating-card delay">📊 Monitoring <br />Reports</div>
+                            
+                            <div class="floating-card delay2">📄 Validation Results</div>
+
+                            <div class="center-icon"><i class="ti-video-clapper" style="color:blueviolet;"></i></div>
+                        </div>
+                    </div>
+
+                    <!-- Right Visual -->
+                    <div class="col-lg-8">
+                        <div class="doc-content">
+
+                            <span class="doc-badge">DOCUMENT LIBRARY</span>
+
+                            <h1 class="doc-title">
+                                One Place for All
+                                <span>Model Governance Documents</span>
+                            </h1>
+
+                            <p class="doc-desc">
+                                A centralized hub designed for seamless access to AI/ML model documentation,
+                                compliance frameworks, audit reports, etc.. —
+                                empowering data scientists and governance teams.
+                            </p>
+
+                            <!-- CTA -->
+                            <div class="doc-actions">
+                                <a href="#" class="btn btn-gradient">
+                                    Learn More
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- Document Library Ends -->
+    <!-- footer -->
+    <footer class="footer-section footer" style="background-image: url(images/backgrounds/footertaj.png);">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <!-- logo -->
+                    <img class="img-fluid" src="images/hdfcbanklogo.svg" alt="logo" style="max-width:190px;">
+                    <br />
+                    <h5 style="color:white;">The <span style="color:greenyellow;">COE</span> Website is an internal product of HDFC Bank. Access and usage are restricted to authorized users only.</h5>
+
+                </div>
+                <!-- footer menu -->
+                <div class="col-md-4">
+                    <div class="footer-widget">
+                        <h3 style="color:white;"><span style="color:greenyellow;">Q</span>uick <span style="color:greenyellow;">L</span>inks</h3>
+                        <ul class="links">
+                            <li><a href="" style="color:white;">Mitra</a></li>
+                            <li><a href="" style="color:white;">Model Documentation Validator</a></li>
+                            <li><a href="" style="color:white;">Help Desk</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h2 style="color:greenyellow; opacity:40%;">Coming Soon....</h2>
+                    <h4 style="color:greenyellow; opacity:40%;">Drift Checker <i class="ti-gift" style="color:magenta;"></i></h4>
+                </div>
+            </div>
+            <p style="color:red;">©All Rights Reserved© - HDFC BANK.</p>
+        </div>
+    </footer>
+    <!-- /footer -->
+    <!-- jQuery -->
+    <script src="plugins/jQuery/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- slick slider -->
+    <script src="plugins/slick/slick.min.js"></script>
+    <!-- venobox -->
+    <script src="plugins/Venobox/venobox.min.js"></script>
+    <!-- aos -->
+    <script src="plugins/aos/aos.js"></script>
+    <!-- Main Script -->
+    <script src="js/script.js"></script>
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener("scroll", function () {
+            var navbar = document.querySelector(".navigation");
+
+            if (window.scrollY > 50) {
+                navbar.classList.add("nav-scrolled");
+            } else {
+                navbar.classList.remove("nav-scrolled");
+            }
+        });
+    </script>
+
+    <script>
+        const items = document.querySelectorAll(".cover-item");
+        let current = 2; // start from middle for balance
+
+        function updateCoverflow() {
+            items.forEach((item, index) => {
+                const offset = index - current;
+
+                if (offset === 0) {
+                    item.style.transform =
+                        "translateX(-50%) translateZ(200px) rotateY(0deg) scale(1.15)";
+                    item.style.zIndex = 10;
+                    item.style.opacity = 1;
+                }
+                else if (offset === -1) {
+                    item.style.transform =
+                        "translateX(-170%) translateZ(0px) rotateY(40deg) scale(0.9)";
+                    item.style.zIndex = 6;
+                    item.style.opacity = 0.8;
+                }
+                else if (offset === 1) {
+                    item.style.transform =
+                        "translateX(70%) translateZ(0px) rotateY(-40deg) scale(0.9)";
+                    item.style.zIndex = 6;
+                    item.style.opacity = 0.8;
+                }
+                else {
+                    item.style.transform =
+                        "translateX(-50%) translateZ(-250px) scale(0.7)";
+                    item.style.zIndex = 1;
+                    item.style.opacity = 0;
+                }
+            });
+        }
+
+        function nextSlide() {
+            current = (current + 1) % items.length;
+            updateCoverflow();
+        }
+
+        updateCoverflow();
+        setInterval(nextSlide, 3500);
+    </script>
+
+</body>
+</html>
